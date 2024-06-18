@@ -1,0 +1,48 @@
+.Dropdown {
+  position: relative;
+  width: 400px;
+  padding: 20px;
+  border: 1px solid black;
+}
+
+.Dropdown__menu {
+  position: absolute;
+  top: 17%;
+  left: 32%;
+  width: 240px;
+  padding: 20px;
+  text-align: center;
+  background-color: rgb(6, 161, 161);
+  color: rgb(255, 255, 255);
+}
+
+.Dropdown__toggle {
+  width: 100px;
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Dropdown__toggle--red {
+  background-color: rgb(236, 7, 7);
+  color: white;
+}
+
+.Dropdown__toggle--green {
+  background-color: green;
+  color: white;
+}
+
+/* .Dropdown__toggle:nth-child(1) {
+  background-color: #28a745;
+  color: white;
+}
+
+.Dropdown__toggle:nth-child(2) {
+  background-color: #ffc107;
+  color: white;
+} */

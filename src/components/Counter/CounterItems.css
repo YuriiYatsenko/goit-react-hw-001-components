@@ -1,0 +1,83 @@
+.Feedback {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 0 0 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.Feedback h1,
+.Feedback h2 {
+  margin-bottom: 20px;
+}
+
+.Feedback__controls {
+  display: flex;
+  flex-direction: row;
+  /* Кнопки будуть в рядок */
+  justify-content: center;
+  /* Вирівнювання кнопок по центру */
+}
+
+.Feedback__controls button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Feedback__controls button:hover {
+  opacity: 0.9;
+}
+
+.Feedback__controls button:active {
+  opacity: 0.7;
+}
+
+.Feedback__controls button:nth-child(1) {
+  background-color: #28a745;
+  color: white;
+}
+
+.Feedback__controls button:nth-child(2) {
+  background-color: #ffc107;
+  color: white;
+}
+
+.Feedback__controls button:nth-child(3) {
+  background-color: #dc3545;
+  color: white;
+}
+
+.Feedback__controls button:nth-child(4) {
+  background-color: #2883a7;
+  color: white;
+}
+
+.Feedback__statistics p {
+  margin: 5px 0;
+}
+
+.Stats__menu {
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  text-align: left;
+}
+
+.Stats__menu p {
+  margin: 5px 0;
+}
+
+.Stats__menu span {
+  font-weight: bold;
+}
