@@ -8,7 +8,9 @@ import Dropdown from './Dropdown/Dropdown';
 import ColorPicker from './ColorPicker/ColorPicker';
 import AppList from './AppList/AppList';
 import Form from './Form/Form';
-import Phonebook from './Phonebook/Phonebook'
+import Phonebook from './Phonebook/Phonebook';
+import ModalComponent from './Modal/ModalWindow';
+import SearchApp from './Searchbar/SearchApp'
 import user from './Profile/user.json';
 import data from './Statistics/data.json';
 import friends from './Friends/friends.json';
@@ -19,6 +21,7 @@ import './app.css';
 const App = () => {
   return (
     <div className="app">
+      <SearchApp />
       <Profile
         username={user.username}
         tag={user.tag}
@@ -35,6 +38,7 @@ const App = () => {
       <AppList />
       <Form />
       <Phonebook />
+      <ModalComponent />
     </div>
   );
 };

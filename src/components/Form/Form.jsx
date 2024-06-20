@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import FormList from "./FormList";
+import React, { Component } from 'react';
+import FormList from './FormList';
 
 const initialTodos = []; // Додайте визначення initialTodos
 
@@ -28,12 +28,12 @@ class Form extends Component {
     return (
       <div className="container">
         <FormList onSubmit={this.formSubmitHandler} />
-        {/* <FormList onSubmit={this.formSubmitHandler} /> */}
       </div>
     );
   }
 }
 
 export default Form;
+
 
 

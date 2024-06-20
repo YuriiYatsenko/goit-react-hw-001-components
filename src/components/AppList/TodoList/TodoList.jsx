@@ -25,7 +25,7 @@ const TodoList = ({ todos, onDeleteTodo, onToggleTodo }) => (
 TodoList.propTypes = {
   todos: PropTypes.arrayOf(
     PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       text: PropTypes.string.isRequired,
       completed: PropTypes.bool,
     })
@@ -33,6 +33,7 @@ TodoList.propTypes = {
   onDeleteTodo: PropTypes.func.isRequired,
   onToggleTodo: PropTypes.func.isRequired,
 };
+
 
 export default TodoList;
 

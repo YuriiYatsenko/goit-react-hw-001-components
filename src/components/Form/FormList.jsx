@@ -7,53 +7,36 @@ class FormList extends Component {
     name: '',
     tag: '',
     experience: 'junior',
-    license: 'false',
+    license: false,
   };
 
   nameInputId = shortid.generate();
-  tageInputId = shortid.generate();
+  tagInputId = shortid.generate();
 
-  // handleNameChange = event => {
-  //   this.setState({ name: event.target.value });
-  // };
-
-  // handleNameChange = event => {
-  //   this.setState({ tage: event.target.value });
-  // };
-
-  handleChange = e => {
-    const {name, value} = e.currentTarget
+  handleChange = (e) => {
+    const { name, value } = e.currentTarget;
     this.setState({
-      // вичисляемие свойства обекта
-      // const a = qwe,
-      // [a]: 5
-      // {
-      //   qwe: 5
-      // }
-
-      // [e.currentTarget.name]: e.currentTarget.value
-
-      [name]: value
+      [name]: value,
     });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-
-    this.props.onSubmit(this.state);
-
-    this.reset();
+  handleLicenseChange = (e) => {
+    this.setState({ license: e.currentTarget.checked });
   };
 
-  handleLicenseChange = e => {
-    console.log(e.currentTarget.checked);
-  }
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.onSubmit(this.state);
+    this.reset();
+  };
 
   reset = () => {
     this.setState({
       name: '',
       tag: '',
-    })
+      experience: 'junior',
+      license: false,
+    });
   };
 
   render() {
@@ -78,7 +61,7 @@ class FormList extends Component {
             value={this.state.tag}
             onChange={this.handleChange}
             className="input"
-            id={this.tageInputId}
+            id={this.tagInputId}
           />
         </label>
 
@@ -89,7 +72,9 @@ class FormList extends Component {
             name="experience"
             value="junior"
             onChange={this.handleChange}
-            checked={this.state.experience === 'junior'} />junior
+            checked={this.state.experience === 'junior'}
+          />
+          junior
         </label>
         <label>
           <input
@@ -97,7 +82,9 @@ class FormList extends Component {
             name="experience"
             value="middle"
             onChange={this.handleChange}
-            checked={this.state.experience === 'middle'} />middle
+            checked={this.state.experience === 'middle'}
+          />
+          middle
         </label>
         <label>
           <input
@@ -105,7 +92,9 @@ class FormList extends Component {
             name="experience"
             value="senior"
             onChange={this.handleChange}
-            checked={this.state.experience === 'senior'} />senior
+            checked={this.state.experience === 'senior'}
+          />
+          senior
         </label>
         <label>
           <input
@@ -116,7 +105,7 @@ class FormList extends Component {
           />
           Согласен с условиями
         </label>
-        
+
         <button type="submit">SEND</button>
       </form>
     );
